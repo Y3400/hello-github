@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>可爱小猫</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1 class="title">点击小猫摸摸它！</h1>
+        <div class="cat-wrapper" id="cat">
+            <svg class="cat" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+                <!-- 耳朵 -->
+                <path class="ear left-ear" d="M50 60 L30 20 L70 30 Z" fill="#FFA07A"/>
+                <path class="ear right-ear" d="M150 60 L170 20 L130 30 Z" fill="#FFA07A"/>
+                <path class="ear-inner left-ear-inner" d="M50 55 L35 25 L65 32 Z" fill="#FFB6C1"/>
+                <path class="ear-inner right-ear-inner" d="M150 55 L165 25 L135 32 Z" fill="#FFB6C1"/>
+
+                <!-- 脸 -->
+                <ellipse class="face" cx="100" cy="110" rx="70" ry="60" fill="#FFA07A"/>
+
+                <!-- 眼睛 -->
+                <g class="eyes">
+                    <ellipse class="eye left-eye" cx="75" cy="100" rx="12" ry="14" fill="#2C3E50"/>
+                    <ellipse class="eye right-eye" cx="125" cy="100" rx="12" ry="14" fill="#2C3E50"/>
+                    <ellipse class="eye-shine left-shine" cx="72" cy="95" rx="4" ry="5" fill="white"/>
+                    <ellipse class="eye-shine right-shine" cx="122" cy="95" rx="4" ry="5" fill="white"/>
+                </g>
+
+                <!-- 鼻子 -->
+                <polygon class="nose" points="100,115 95,122 105,122" fill="#FF6B6B"/>
+
+                <!-- 嘴巴 -->
+                <path class="mouth" d="M100 122 Q100 130 90 135 M100 122 Q100 130 110 135" stroke="#2C3E50" stroke-width="2" fill="none"/>
+
+                <!-- 胡须 -->
+                <g class="whiskers">
+                    <line class="whisker" x1="40" y1="115" x2="65" y2="120" stroke="#2C3E50" stroke-width="1.5"/>
+                    <line class="whisker" x1="40" y1="125" x2="65" y2="125" stroke="#2C3E50" stroke-width="1.5"/>
+                    <line class="whisker" x1="40" y1="135" x2="65" y2="130" stroke="#2C3E50" stroke-width="1.5"/>
+                    <line class="whisker" x1="160" y1="115" x2="135" y2="120" stroke="#2C3E50" stroke-width="1.5"/>
+                    <line class="whisker" x1="160" y1="125" x2="135" y2="125" stroke="#2C3E50" stroke-width="1.5"/>
+                    <line class="whisker" x1="160" y1="135" x2="135" y2="130" stroke="#2C3E50" stroke-width="1.5"/>
+                </g>
+
+                <!-- 腮红 -->
+                <ellipse class="blush left-blush" cx="55" cy="125" rx="12" ry="8" fill="#FFB6C1" opacity="0.6"/>
+                <ellipse class="blush right-blush" cx="145" cy="125" rx="12" ry="8" fill="#FFB6C1" opacity="0.6"/>
+            </svg>
+        </div>
+        <p class="counter">已抚摸 <span id="petCount">0</span> 次</p>
+        <div class="message" id="message"></div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
